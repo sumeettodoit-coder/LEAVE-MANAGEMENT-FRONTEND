@@ -1,0 +1,63 @@
+.leave-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 600px;
+}
+
+.leave-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat {
+  flex: 1;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.stat span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.stat strong {
+  font-size: 20px;
+}
+
+form label {
+  display: block;
+  margin: 16px 0 6px;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.date-row {
+  display: flex;
+  gap: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

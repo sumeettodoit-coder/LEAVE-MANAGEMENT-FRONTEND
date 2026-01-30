@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+
+  <!-- ===== Base & Settings CSS ===== -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR (already exists in your project) ===== -->
+  <aside class="sidebar">
+
+
+    <nav>
+      <a href="../employee/dashboard.html">Dashboard</a>
+      <a href="../employee/new-leave.html">Apply leave</a>
+      <a href="../employee/messages-employee.html">Messages</a>
+      <a class="active">Profile</a>
+    </nav>
+
+    <div class="logout">Logout</div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+    <!-- ===== SETTINGS CONTENT ===== -->
+    <section class="content">
+      <div class="settings-wrapper">
+
+      <!-- ===== PROFILE CARD ===== -->
+      <div class="profile-card">
+
+        <!-- Gradient Header -->
+        <div class="profile-header">
+          <label for="uploadPhoto" class="camera-btn">📷</label>
+          <input type="file" id="uploadPhoto" hidden>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="profile-avatar">
+          <img id="profileImg" src="../images/profile/default.png">
+        </div>
+
+        <!-- Edit Button -->
+        
+            <div class="edit-icon" id="editToggle">✏️</div>
+
+        <!-- ===== DETAILS GRID ===== -->
+        <div class="profile-grid">
+
+          <!-- Personal Info -->
+          <div class="info-box">
+            <h3>👤 Personal Information</h3>
+
+            <p><span>Full Name</span> <input id="name" value="John Doe"></p>
+            <p><span>Email Address</span> <input id="email" value="john.doe@example.com"></p>
+            <p><span>Phone Number</span> <input id="phone" value="+1 (555) 000-0000"></p>
+          </div>
+
+          <!-- Work Info -->
+          <div class="info-box">
+            <h3>🏢 Work & Location</h3>
+
+            <p><span>Department</span> <input value="working"></p>
+            <p><span>Role</span> <span class="role admin">EMPLOYEE</span></p>
+            <p><span>Address</span> <input value="123 Tech Lane, Silicon Valley, CA"></p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<!-- ===== SETTINGS JS ===== -->
+<script src="../js/profile.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/roles.js"></script>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/chat-list.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+</body>
+</html>

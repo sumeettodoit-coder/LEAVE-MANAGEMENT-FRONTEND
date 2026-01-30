@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manager Dashboard</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/messages.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+  
+      <nav>
+        <a class="active">Dashboard</a>
+        <a href="../manager/approvals.html">Manage Leaves</a>
+        <a href="../manager/messages-massages.html">Messages</a>
+        <a href="../manager/new-leave.html">Apply leave</a>
+        <a href="../manager/team-manager.html">Team</a>
+        <a href="../manager/manager-profile.html">Profile</a>
+      </nav>
+  
+      <div class="logout">
+        <a href="../auth/login.html">logout</a></div>
+    </aside>
+  
+    <!-- Main -->
+    <main class="main">
+  
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+          <span class="logo-text">LeaveFlow</span>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <span class="icon">🔔</span>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+        </div>
+    </header>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div>
+        <h2>Manager Dashboard</h2>
+        <p>Review and manage your team's leave requests.</p>
+      </div>
+
+      <button id="openAnnouncementBtn" class="announce-btn">
+        📣 Post Important Message
+      </button>  
+    </section>
+
+    <!-- STATS CARDS -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="icon orange"><i class="fa-regular fa-clock"></i></div>
+        <div>
+          <p>Pending Requests</p>
+          <h2 id="pendingCount">0</h2>
+          
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="icon green"><i class="fa-regular fa-circle-check"></i></div>
+        <div>
+          <p>Approved Leaves</p>
+          <h2 id="approvedCount">0</h2>
+
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="icon blue"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <p>Team Size</p>
+          <h2 id="mgrCount">0</h2>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAVE REQUEST TABLE -->
+    <section class="card">
+      <div class="card-header">
+        <h3>Leave Requests</h3>
+
+        <div class="manager-control">
+          <label>
+            <input type="checkbox" id="approvalToggle">
+          </label>
+        </div>
+
+        <div class="table-actions">
+          <input type="text" placeholder="Search employee..." />
+          <button class="icon-btn"><i class="fa-solid fa-filter"></i></button>
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Type</th>
+            <th>Duration</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="employee-cell">
+              <div class="employee-avatar">AJ</div>
+              <div class="employee-name">Alice Johnson</div>
+            </div>
+          
+            <td><span class="badge blue">Medical</span></td>
+            <td>3 days <small>(2024-03-20)</small></td>
+            <td>Severe flu and fever</td>
+            
+            <td><span class="badge yellow">Pending</span></td>
+            <td class="actions">
+              <span class="approve">✔</span>
+              <span class="reject">✖</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td> 
+               <div class="employee-cell">
+                <div class="employee-avatar">BS</div>
+                <div class="employee-name">Bob Smith</div>
+              </div>
+            
+              <td><span class="badge blue">General</span></td>
+            <td>2 days <small>(2024-03-25)</small></td>
+            <td>Family function</td>
+            <td><span class="badge yellow">Pending</span></td>
+            <td class="actions">
+              <span class="approve">✔</span>
+              <span class="reject">✖</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="employee-cell">
+              <div class="employee-avatar">CB</div>
+              <div class="employee-name">Charlie Brown</div>
+            </div>
+
+            
+            <td><span class="badge blue">Personal</span></td>
+           <td>1 day <small>(2024-03-15)</small></td>
+           <td>Personal errands</td>
+            <td><span class="badge green">Approved</span></td>
+            <td class="actions">
+              <span class="approve">✔</span>
+              <span class="reject">✖</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div id="announcementModal" class="modal-overlay">
+      <div class="modal-box">
+        
+        <div class="modal-header">
+          <div class="icon">📣</div>
+          <h3>Post Important Message</h3>
+          <span id="closeModal" class="close">✕</span>
+        </div>
+    
+        <p class="modal-sub">
+          This message will be sent as a notification to all Employees.
+        </p>
+    
+        <textarea id="announcementText"
+          placeholder="Type your important update here..."></textarea>
+    
+        <button id="sendAnnouncement" class="send-btn">
+          ➤ Send Announcement
+        </button>
+    
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+<script type="module" src="../js/dashboardCounts.js"></script>
+<script type="module" src="../js/dashboard-counts.js"></script>
+<script type="module" src="../js/manage-leaves.js"></script>
+</body>
+</html>

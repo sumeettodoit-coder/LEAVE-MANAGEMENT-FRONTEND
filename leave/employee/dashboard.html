@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Dashboard</title>
+
+  <!-- ===== BASE + EMPLOYEE DASHBOARD CSS ===== -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/messages.css">
+  <link rel="stylesheet" href="../css/employee-dashboard.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+  
+      <nav>
+        <a class="active">Dashboard</a>
+        <a href="../employee/new-leave.html">Apply leave</a>
+        <a href="../employee/messages-employee.html">Messages</a>
+        <a href="../employee/profile-employee.html">Profile</a>
+      </nav>
+  
+      <div class="logout">
+        <a href="../auth/login.html">logout</a></div>
+    </aside>
+  
+    <!-- Main -->
+    <main class="main">
+  
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="brand">
+            <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+            <span class="logo-text">LeaveFlow</span>
+          </div>
+        </div>
+      
+        <div class="header-right">
+          <!-- <span class="icon" id="sidebarToggle">☰</span> -->
+  
+          <span class="icon" id="themeToggle">🌙</span>
+          <div class="notif-wrapper">
+            <span id="bellBtn">🔔</span>
+            <span id="notifCount" class="badge">0</span>
+          
+            <div id="notifDropdown" class="notif-dropdown">
+              <div class="notif-header">
+                <strong>Notifications</strong>
+                <span id="markAll">Mark all read</span>
+              </div>
+          
+              <div id="notifList"></div>
+            </div>
+          </div>          
+      
+          <div class="user">
+            <div class="avatar" id="avatar">AD</div>
+            <div>
+              <strong id="userName">Loading...</strong>
+              <small id="userRole">Loading...</small>
+            </div>
+          </div>
+      </header>
+    <!-- ===== CONTENT ===== -->
+    <section class="content">
+
+      <!-- ===== PAGE TITLE ===== -->
+      <h1>Employee Dashboard</h1>
+      <p class="subtitle">
+        Overview of your leave status and upcoming schedule.
+      </p>
+
+      <!-- ===== MOOD CARD ===== -->
+      <div class="mood-card">
+        <h3>How’s your mood today?</h3>
+
+        <div class="moods">
+          <div class="mood">😀<span>Good</span></div>
+          <div class="mood">😄<span>Very Good</span></div>
+          <div class="mood">😐<span>Normal</span></div>
+          <div class="mood">☹️<span>Bad</span></div>
+        </div>
+
+        <!-- Mood Comment Box (Hidden by default) -->
+        <div class="mood-comment hidden">
+          <textarea placeholder="Write how you are feeling today..."></textarea>
+          <button class="save-mood">Save</button>
+        </div>
+      </div>
+
+      <!-- ===== STATS CARDS ===== -->
+      <div class="stats-grid">
+        <div class="stat-card blue">
+          <h4>Total Leaves</h4>
+          <h2>30</h2>
+          <p>Annual allocation</p>
+        </div>
+
+        <div class="stat-card orange">
+          <h4>Used Leaves</h4>
+          <h2>0</h2>
+          <p>Annual allocation</p>
+        </div>
+
+        <div class="stat-card green">
+          <h4>Remaining Leaves</h4>
+          <h2>30</h2>
+          <p>Annual allocation</p>
+        </div>
+      </div>
+
+      <!-- ===== CALENDAR ===== -->
+      <div class="calendar-card">
+        <div class="calendar-header">
+          <h3>Leave Calendar</h3>
+          <span>January 2026</span>
+        </div>
+
+        <div class="calendar-grid">
+          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+
+          <span></span><span></span><span></span>
+          <span>1</span><span>2</span><span>3</span><span>4</span>
+          <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+          <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+          <span>19</span><span class="today">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+        </div>
+      </div>
+
+      <!-- ===== RECENT APPLICATIONS ===== -->
+      <div class="applications-card">
+        <h3>Recent Applications</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Dates</th>
+              <th>Days</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" class="empty">No leave applications yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/dashboardCounts.js"></script>
+<script type="module" src="../js/common.js"></script>
+<script type="module" src="../js/dashboard-counts.js"></script>
+<script type="module" src="../js/manage-leaves.js"></script>
+</body>
+</html>

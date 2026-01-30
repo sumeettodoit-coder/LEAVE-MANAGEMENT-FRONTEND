@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Messages</title>
+
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/messages.css">
+<link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+<body>
+
+<script>
+  /* ===== CURRENT USER ROLE ===== */
+  const CURRENT_ROLE = "employee"; 
+  // "employee" | "manager" | "admin"
+</script>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+
+    <nav>
+      <a href="../employee/dashboard.html">Dashboard</a>
+      <a href="../employee/new-leave.html">Apply leave</a>
+      <a class="active">Messages</a>
+      <a href="../employee/profile-employee.html">Profile</a>
+    </nav>
+
+    <div class="logout">
+      <a href="../auth/login.html">logout</a></div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+      <div class="brand">
+        <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+        <span class="logo-text">LeaveFlow</span>
+      </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <span class="icon">🔔</span>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+      </div>
+    </header>
+    
+    <section class="chat-layout">
+
+      <div class="chat-list" id="chatList"></div>
+    
+      <div class="chat-window">
+        <div class="chat-header">
+          <span class="avatar sm">S</span>
+          <strong>Select a chat</strong>
+        </div>
+    
+        <div class="messages" id="messages"></div>
+    
+        <div class="chat-input">
+          <input id="msgInput" placeholder="Type a message..." />
+          <button id="sendBtn">➤</button>
+        </div>
+      </div>
+    
+    </section>
+    
+      
+          
+  </main>
+  
+</div>
+
+<script>
+  window.CURRENT_USER_ID = "employee_1";
+  window.CURRENT_ROLE = "employee";
+</script>
+<script type="module" src="../js/employee-messages.js"></script>
+<script src="../js/chat-list.js"></script>
+<script src="../js/firebase.js"></script>
+<script src="../js/roles.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/roles.js"></script>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/chat-list.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+</body>
+</html>

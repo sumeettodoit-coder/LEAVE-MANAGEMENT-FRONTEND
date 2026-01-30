@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apply for Leave</title>
+
+  <link rel="stylesheet" href="../css/leave.css">
+
+
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+</head>
+<body>
+    <div class="layout">
+  <aside class="sidebar">
+
+
+    <nav>
+      <a href="../employee/dashboard.html">Dashboard</a>
+      <a class="active">Apply leave</a>
+      <a href="../employee/messages-employee.html">Messages</a>
+      <a href="../employee/profile-employee.html">Profile</a>
+    </nav>
+
+    <div class="logout">
+      <a href="../auth/login.html">logout</a></div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+    <div class="center-wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+          <span class="logo-text">LeaveFlow</span>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <span class="icon">🔔</span>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+      </div>
+    </header>
+    
+
+<div class="leave-container">
+  <h2>Apply for Leave</h2>
+  <p class="subtitle">Submit a new leave request for approval.</p>
+
+  <div class="cards">
+    <div class="card">GENERAL LEAVE<br><strong>10</strong></div>
+    <div class="card">MEDICAL LEAVE<br><strong>5</strong></div>
+    <div class="card">PERSONAL LEAVE<br><strong>15</strong></div>
+  </div>
+
+  <label>Leave Type</label>
+  <select id="leaveType">
+    <option>General Leave</option>
+    <option>Medical Leave</option>
+    <option>Personal Leave</option>
+  </select>
+
+  <div class="row">
+    <div>
+      <label>Start Date</label>
+      <input type="date" id="startDate">
+    </div>
+    <div>
+      <label>End Date</label>
+      <input type="date" id="endDate">
+    </div>
+  </div>
+
+  <label>Reason for Leave</label>
+  <textarea id="reason" placeholder="Please provide a detailed reason..."></textarea>
+
+  <button id="applyBtn">Apply for Leave</button>
+</div>
+
+
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/roles.js"></script>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/chat-list.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+<script type="module" src="../js/leave.js"></script>
+<script type="module" src="../js/manage-leaves.js"></script>
+<script type="module" src="../js/dashboardCounts.js"></script>
+</body>
+</html>

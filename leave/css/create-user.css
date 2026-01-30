@@ -1,0 +1,46 @@
+.create-user-card {
+  width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #eef2ff);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  animation: pop 0.7s ease;
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.create-user-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-user-card input,
+.create-user-card select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe1ff;
+}
+
+.create-user-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(37,99,235,0.35);
+}
+
+.create-user-card button:hover {
+  transform: translateY(-2px);
+}

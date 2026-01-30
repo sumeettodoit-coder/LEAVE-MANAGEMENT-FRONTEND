@@ -1,0 +1,113 @@
+/* ===== PAGE TEXT ===== */
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ===== TEAM GRID ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* ===== TEAM CARD ===== */
+.team-card {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: fadeUp 0.5s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== CARD TOP ===== */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== AVATAR ===== */
+.avatar.big {
+  width: 52px;
+  height: 52px;
+  font-size: 18px;
+}
+
+/* ===== STATUS BADGE ===== */
+.status {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.status.working {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.leave {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status.remote {
+  background: #e0ecff;
+  color: #2563eb;
+}
+
+/* ===== TEXT ===== */
+.team-card h3 {
+  margin: 16px 0 4px;
+}
+
+.team-card .role {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #f1f5f9;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #e0ecff;
+  transform: translateY(-2px);
+}
+
+.btn.chat {
+  background: #e0ecff;
+  color: #2563eb;
+}
+
+/* ===== ENTRY ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

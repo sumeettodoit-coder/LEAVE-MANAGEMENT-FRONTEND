@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/messages.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/manage-leaves.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+  
+    
+
+    <nav>
+      <a href="../admin/dashboard.html">Dashboard</a>
+      <a class="active">Manage Leaves</a>
+      <a href="../admin/messages-admin.html">Messages</a>
+      <a href="../admin/team.html">Team</a>
+      <a href="../admin/profile.html">Profile</a>
+      <a href="../admin/create-user.html">create-user</a>
+    </nav>
+
+    <div class="logout">
+      <a href="../auth/login.html">logout</a></div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+          <span class="logo-text">LeaveFlow</span>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <div class="notif-wrapper">
+          <span id="bellBtn">🔔</span>
+          <span id="notifCount" class="badge">0</span>
+        
+          <div id="notifDropdown" class="notif-dropdown">
+            <div class="notif-header">
+              <strong>Notifications</strong>
+              <span id="markAll">Mark all read</span>
+            </div>
+        
+            <div id="notifList"></div>
+          </div>
+        </div>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+        </div>
+        
+    </header>
+    
+    <!-- PAGE CONTENT -->
+    <section class="content">
+
+      <!-- PAGE TITLE -->
+      <div class="page-title">
+        <h1>Global Leave Management</h1>
+        <p class="subtitle">
+          Review and manage leave requests from all employees and managers.
+        </p>
+      </div>
+
+      <!-- MAIN 3D PANEL -->
+      <div class="leaves-panel">
+
+        <!-- PANEL HEADER -->
+        <div class="panel-top">
+          <h3>All Requests</h3>
+          <input type="text" placeholder="Search name..." />
+        </div>
+
+        <!-- TABLE -->
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Role</th>
+              <th>Type</th>
+              <th>Duration</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tbody id="leaveTableBody"></tbody>
+
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+  </main>
+  <div class="modal" id="rejectModal">
+    <div class="modal-box">
+      <h3>Reject Leave</h3>
+      <textarea id="rejectReason" placeholder="Enter rejection reason..."></textarea>
+  
+      <div class="modal-actions">
+        <button id="cancelReject">Cancel</button>
+        <button id="confirmReject">Reject</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="../js/manage-leaves.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+<script type="module" src="../js/dashboard-counts.js"></script>
+<script type="module" src="../js/manage-leaves.js"></script>
+</body>
+</html>

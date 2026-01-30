@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Team</title>
+
+  <!-- ===== Base + Team CSS ===== -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/team.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <nav>
+      <a href="../manager/dashboard.html">Dashboard</a>
+      <a href="../manager/approvals.html">Manage Leaves</a>
+      <a href="../manager/messages-massages.html">Messages</a>
+      <a href="../manager/new-leave.html">Apply leave</a>
+      <a class="active">Team</a>
+      <a href="../manager/manager-profile.html">Profile</a>
+    </nav>
+    <div class="logout">Logout</div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- ===== HEADER ===== -->
+    <main class="main">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="brand">
+            <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+            <span class="logo-text">LeaveFlow</span>
+          </div>
+        </div>
+      
+        <div class="header-right">
+          <span class="icon" id="sidebarToggle">☰</span>
+  
+          <span class="icon" id="themeToggle">🌙</span>
+          <span class="icon">🔔</span>
+      
+          <div class="user">
+            <div class="avatar" id="avatar">AD</div>
+            <div>
+              <strong id="userName">Loading...</strong>
+              <small id="userRole">Loading...</small>
+            </div>
+        </div>
+      </header>
+      
+
+    <!-- ===== CONTENT ===== -->
+    <section class="content">
+
+      <!-- ===== PAGE TITLE ===== -->
+      <h1>My Team</h1>
+      <p class="subtitle">
+        Manage and monitor your team members' status.
+      </p>
+
+      <!-- ===== TEAM GRID ===== -->
+      <div class="team-grid">
+
+        <!-- ===== TEAM CARD ===== -->
+        <div class="team-card working">
+          <div class="card-top">
+            <div class="avatar big">A</div>
+            <span class="status working">WORKING</span>
+          </div>
+
+          <h3>Alice Johnson</h3>
+          <p class="role">Frontend Developer</p>
+
+          <div class="card-actions">
+            <button class="btn view">👁 View</button>
+            <button class="btn chat">💬 Chat</button>
+          </div>
+        </div>
+
+        <!-- ===== TEAM CARD ===== -->
+        <div class="team-card leave">
+          <div class="card-top">
+            <div class="avatar big">B</div>
+            <span class="status leave">ON LEAVE</span>
+          </div>
+
+          <h3>Bob Smith</h3>
+          <p class="role">Backend Developer</p>
+
+          <div class="card-actions">
+            <button class="btn view">👁 View</button>
+            <button class="btn chat">💬 Chat</button>
+          </div>
+        </div>
+
+        <!-- ===== TEAM CARD ===== -->
+        <div class="team-card remote">
+          <div class="card-top">
+            <div class="avatar big">C</div>
+            <span class="status remote">REMOTE</span>
+          </div>
+
+          <h3>Charlie Brown</h3>
+          <p class="role">UI Designer</p>
+
+          <div class="card-actions">
+            <button class="btn view">👁 View</button>
+            <button class="btn chat">💬 Chat</button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<script src="../js/team.js"></script>
+</body>
+</html>

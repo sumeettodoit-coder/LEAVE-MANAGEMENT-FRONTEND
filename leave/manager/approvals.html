@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Leaves</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/manage-leaves.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+
+  
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+
+    <nav>
+      <a href="../manager/dashboard.html">Dashboard</a>
+      <a class="active">Manage Leaves</a>
+      <a href="../manager/messages-massages.html">Messages</a>
+      <a href="../manager/new-leave.html">Apply leave</a>
+      <a href="../manager/team-manager.html">Team</a>
+      <a href="../manager/manager-profile.html">Profile</a>
+    </nav>
+
+    <div class="logout"><a href="../auth/login.html">Logout</a></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+          <span class="logo-text">LeaveFlow</span>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <span class="icon">🔔</span>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <section class="content">
+
+      <!-- PAGE TITLE -->
+      <div class="page-title">
+        <h1>Global Leave Management</h1>
+        <p class="subtitle">
+          Review and manage leave requests from all employees and managers.
+        </p>
+      </div>
+
+      <!-- MAIN 3D PANEL -->
+      <div class="leaves-panel">
+
+        <!-- PANEL HEADER -->
+        <div class="panel-top">
+          <h3>All Requests</h3>
+          <input type="text" placeholder="Search name..." />
+        </div>
+
+        <!-- TABLE -->
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Role</th>
+              <th>Type</th>
+              <th>Duration</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leaveTableBody"></tbody>
+
+
+        </table>
+
+      </div>
+    </section>
+
+  </main>
+  <div class="modal" id="rejectModal">
+    <div class="modal-box">
+      <h3>Reject Leave</h3>
+      <textarea id="rejectReason" placeholder="Enter rejection reason..."></textarea>
+  
+      <div class="modal-actions">
+        <button id="cancelReject">Cancel</button>
+        <button id="confirmReject">Reject</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script type="module" src="../js/dashboard-counts.js"></script>
+<script type="module" src="../js/manage-leaves.js"></script>
+<script src="../js/app.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/roles.js"></script>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/chat-list.js"></script>
+<script type="module" src="../js/messages.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>
+</body>
+</html>

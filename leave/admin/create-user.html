@@ -1,0 +1,108 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/messages.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/create-user.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <nav>
+      <a href="../admin/dashboard.html">Dashboard</a>
+      <a href="../admin/manager-leaves.html">Manage Leaves</a>
+      <a href="../admin/messages-admin.html">Messages</a>
+      <a href="../admin/team.html">Team</a>
+      <a href="../admin/profile.html">Profile</a>
+      <a class="active">create-user</a>
+    </nav>
+
+    <div class="logout">
+      <a href="../auth/login.html">logout</a></div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    
+    <header class="header">
+      <div class="header-left">
+        <div class="brand">
+          <img src="../images/profile/logo.png" alt="LeaveFlow Logo" class="logo-img">
+          <span class="logo-text">LeaveFlow</span>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <span class="icon" id="sidebarToggle">☰</span>
+
+        <span class="icon" id="themeToggle">🌙</span>
+        <div class="notif-wrapper">
+          <span id="bellBtn">🔔</span>
+          <span id="notifCount" class="badge">0</span>
+        
+          <div id="notifDropdown" class="notif-dropdown">
+            <div class="notif-header">
+              <strong>Notifications</strong>
+              <span id="markAll">Mark all read</span>
+            </div>
+        
+            <div id="notifList"></div>
+          </div>
+        </div>
+    
+        <div class="user">
+          <div class="avatar" id="avatar">AD</div>
+          <div>
+            <strong id="userName">Loading...</strong>
+            <small id="userRole">Loading...</small>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="create-user-card">
+      <h2>Create User</h2>
+    
+      <!-- <input id="cuName" placeholder="Full Name" />
+      <input id="cuEmail" placeholder="Email" />
+      <input id="cuPassword" type="password" placeholder="Password" />
+    
+      <select id="cuRole">
+        <option value="manager">Manager</option>
+        <option value="admin">Admin</option>
+      </select>
+    
+      <button id="createUserBtn">Create User</button>
+    </div> -->
+<input type="text" id="cuName" placeholder="Name">
+<input type="email" id="cuEmail" placeholder="Email">
+<input type="password" id="cuPassword" placeholder="Password">
+
+<select id="cuRole">
+  <option value="">Select Role</option>
+
+  <option value="manager">Manager</option>
+  <option value="admin">Admin</option>
+</select>
+
+<button id="createUserBtn">Create User</button>
+
+    
+
+<script type="module" src="../js/create-user.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+<script src="../js/announcement.js"></script>
+<script src="../js/create-user.js"></script>
+<script type="module" src="../js/user-info.js"></script>
+<script type="module" src="../js/users.js"></script>
+<script type="module" src="../js/dashboard-stats.js"></script>
+<script type="module" src="../js/common.js"></script>

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  color: #111;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+}
+.layout {
+  display: flex;
+  height: calc(100vh - 64px);
+  margin-top: 64px; /* header height */
+}
+
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    z-index: 1000;
+  }
+  
+
+.nav a {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.search {
+  padding: 6px 10px;
+}
+
+.main {
+  padding: 30px;
+}
+body {
+  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.04);
+}
+.card {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  transition: all 0.35s ease;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+}
+
+.table-box {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+}
+
+table tr {
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+table tbody tr:hover {
+  background: #f1f5f9;
+  transform: scale(1.01);
+}
+.button {
+  box-shadow:
+    0 10px 25px rgba(122, 90, 248, 0.35);
+}
+
+.button:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow:
+    0 4px 12px rgba(122, 90, 248, 0.25);
+}
+body.dark {
+  background: #020617;
+}
+
+body.dark .card,
+body.dark .sidebar,
+body.dark .header {
+  background: #020617;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+  transform: translateY(-6px) rotateX(2deg);
+}
+.notification-box {
+  position: absolute;
+  top: 64px;
+  right: 24px;
+  background: white;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 50;
+}
