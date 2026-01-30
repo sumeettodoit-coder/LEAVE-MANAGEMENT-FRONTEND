@@ -60,91 +60,6 @@ This project demonstrates **real-world frontend architecture** with **Firebase a
 
 ---
 
-## Project Structure
-
-leaveflow/
-│
-├── auth/
-│ ├── login.html
-│ ├── signup.html
-│
-├── employee/
-│ ├── dashboard.html
-│ ├── apply-leave.html
-│
-├── manager/
-│ ├── dashboard.html
-│ ├── leave-management.html
-│
-├── admin/
-│ ├── dashboard.html
-│ ├── manage-users.html
-│ ├── global-leaves.html
-│
-├── css/
-│ ├── auth.css
-│ ├── dashboard.css
-│ ├── chat.css
-│
-├── js/
-│ ├── firebase.js
-│ ├── auth.js
-│ ├── apply-leave.js
-│ ├── manager-leaves.js
-│ ├── admin-leaves.js
-│ ├── chat.js
-│ ├── stats.js
-│
-└── README.md
-
-
----
-
-## Firebase Data Structure
-
-### Users Collection
-
-
-users/
-└── uid/
-├── name
-├── email
-├── role // employee | manager | admin
-├── createdAt
-
-
-### Leaves Collection
-
-
-leaves/
-└── leaveId/
-├── userId
-├── userName
-├── userRole
-├── leaveType
-├── startDate
-├── endDate
-├── duration
-├── reason
-├── status // pending | approved | rejected
-├── rejectReason
-├── createdAt
-
-
-### Messages Collection
-
-
-messages/
-└── chatId/
-└── messageId/
-├── senderId
-├── receiverId
-├── text
-├── createdAt
-
-
----
-
 ## Authentication Flow
 
 1. User signs up and selects role
@@ -168,3 +83,4 @@ messages/
 7. Status updates reflect in real time
 
 ---
+
