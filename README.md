@@ -79,54 +79,46 @@ This project demonstrates **real-world frontend architecture** with **Firebase a
 
 ---
 
-## Project Structure>>
-LeaveFlow-Frontend/
-├── admin/                      # Admin role pages
-│   ├── admin-dashboard.html    # Admin dashboard with stats
-│   ├── announcements.html      # Post system announcements
-│   ├── assign-roles.html       # Role management interface
-│   ├── manage-leaves.html      # Approve/reject all leaves
-│   ├── messages-admin.html     # Chat with Managers only
-│   └── scan.html               # QR/Scanner feature
-├── manager/                    # Manager role pages
-│   ├── dashboard.html          # Manager dashboard
-│   ├── manager-profile.html    # Profile edit with photo
-│   ├── messages-manager.html   # Chat with Employees & Admin
-│   ├── new-leave-manager.html  # Apply leave for self
-│   └── team.html               # View team members
-├── employee/                   # Employee role pages
-│   ├── employee-dashboard.html # Employee dashboard
-│   ├── calendar.html           # Calendar-based leave selection
-│   ├── messages-employee.html  # Chat with Manager only
-│   ├── new-leave-emp.html      # Apply leave form
-│   ├── profile-employee.html   # Profile & photo upload
-│   └── mood-selector.html      # Daily mood tracking
-├── auth/                       # Public authentication pages
-│   ├── login.html
-│   ├── register.html
-│   └── forgot-password.html
-├── css/                        # Stylesheets
-│   ├── admin-dashboard.css
-│   ├── dashboard.css
-│   ├── login.css
-│   ├── employee-dashboard.css
-│   ├── forms.css
-│   └── utils.css
-├── js/                         # JavaScript modules
-│   ├── firebase-config.js      # Firebase initialization
-│   ├── auth.js                 # Login/Signup/Logout logic
-│   ├── leaves.js               # Leave CRUD operations
-│   ├── chat.js                 # Real-time messaging
-│   ├── notifications.js        # Bell icon & alerts system
-│   ├── dashboard-stats.js      # Statistics and charts
-│   └── utils.js                # Helper functions
-├── images/                     # Static assets
-│   ├── profile-photos/         # User uploaded avatars
-│   └── icons/                  # UI icons
-└── index.html                  # Landing page
-Copy
+## 📁 Project Structure
 
----
+| Folder | Files | Description |
+|--------|-------|-------------|
+| **admin/** | `admin-dashboard.html` | Admin dashboard with stats |
+| | `announcements.html` | Post system announcements |
+| | `assign-roles.html` | Role management interface |
+| | `manage-leaves.html` | Approve/reject all leaves |
+| | `messages-admin.html` | Chat with Managers only |
+| | `scan.html` | QR/Scanner feature |
+| **manager/** | `dashboard.html` | Manager dashboard |
+| | `manager-profile.html` | Profile edit with photo |
+| | `messages-manager.html` | Chat with Employees & Admin |
+| | `new-leave-manager.html` | Apply leave for self |
+| | `team.html` | View team members |
+| **employee/** | `employee-dashboard.html` | Employee dashboard |
+| | `calendar.html` | Calendar-based leave selection |
+| | `messages-employee.html` | Chat with Manager only |
+| | `new-leave-emp.html` | Apply leave form |
+| | `profile-employee.html` | Profile & photo upload |
+| | `mood-selector.html` | Daily mood tracking |
+| **auth/** | `login.html` | Login page |
+| | `register.html` | Signup page |
+| | `forgot-password.html` | Password reset |
+| **css/** | `admin-dashboard.css` | Admin styles |
+| | `dashboard.css` | Manager styles |
+| | `login.css` | Auth page styles |
+| | `employee-dashboard.css` | Employee styles |
+| | `forms.css` | Form elements |
+| | `utils.css` | Common utilities |
+| **js/** | `firebase-config.js` | Firebase initialization |
+| | `auth.js` | Login/Signup logic |
+| | `leaves.js` | Leave CRUD operations |
+| | `chat.js` | Real-time messaging |
+| | `notifications.js` | Bell icon & alerts |
+| | `dashboard-stats.js` | Statistics and charts |
+| | `utils.js` | Helper functions |
+| **images/** | `profile-photos/` | User uploaded avatars |
+| | `icons/` | UI icons |
+| **Root** | `index.html` | Landing page |
 
 ## Authentication Flow>>
 
@@ -183,26 +175,28 @@ Copy
 
 ---
 
+
 ### 📥 Step 1: Clone Repository
-``bash
+
+```bash
 git clone https://github.com/yourusername/LeaveFlow-Frontend.git
-cd LeaveFlow-Frontend``
+cd LeaveFlow-Frontend
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-###   Step 2: Firebase Configuration
+🔥 Step 2: Firebase Configuration
 🚀 Go to Firebase Console
 ➕ Create a new project
 🔐 Enable Authentication → Sign-in method → Email/Password
 💾 Create Cloud Firestore database (Start in test mode for development)
 🖼️ Enable Storage for profile photos
 ⚙️ Register web app and copy Firebase configuration
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚙️ Step 3: Create Config File
-📁 Create file: js/firebase-config.js
+### ⚙️ Step 3: Create Config File
 
-JavaScript
+📁 **Create file:** `js/firebase-config.js`
+
+```javascript
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
@@ -304,11 +298,12 @@ Usage Guide
 👩‍💼 Manager Workflow
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 🔐 Login → 📊 Dashboard → 👀 Review Team Requests → ✅ Approve/Reject with Reason 
     ↓
 📢 Post Announcements → 📝 Apply Own Leave → 💬 Chat with Team/Admin
 🛡️ Admin Workflow
-Copy
+
 🔐 Login → 📊 Dashboard → 🎭 Assign Roles to Users → 📋 Manage All Leaves 
     ↓
 📢 Post Global Announcements → 💬 Chat with Managers Only → 📈 View System Stats
@@ -349,3 +344,4 @@ Deployment
   # Deploy
   firebase deploy
 >>>
+
